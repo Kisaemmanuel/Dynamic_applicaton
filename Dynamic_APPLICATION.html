@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Application</title>
+    <link rel="stylesheet" href="/style/general_styleling.css">
+    <style>
+        /* body{
+            background-color: aquamarine;
+        } */
+
+    </style>
+</head>
+<body onload="greet()">
+    <button Onclick="alert('Hello EMMA_K')">Click me</button>
+    <p id="text">This is the first HTML,CSS and Javascript Fussion</p>
+    
+    <button id="changeText">Change Text</button>
+    <button id="Click"> Internal Javascript Click</button>
+
+<script>
+    let text = document.getElementById("text");
+    let changeTextButton = document.getElementById("changeText");
+    let isOriginalText = true;
+
+    changeTextButton.onclick = function(){
+        if(isOriginalText){
+            text.innerHTML = 'I am testing inline Javascript';
+            isOriginalText = false;
+        } else {
+            text.innerHTML = 'This is the first HTML,CSS and Javascript Fussion';
+            isOriginalText = true;
+        }
+    }
+</script>
+    <button id="Click_here"> click here to Change Background Color</button>
+
+    <input type="text" id="colorInput" placeholder="Enter a color">
+    
+    
+    
+    <script>
+        // function greet(){
+        //     alert('Hello EMMA_K, Welcome to Dynamic Application');
+        // }
+        //document.getElementById("Click").onclick = function(){
+           // alert('Button was Clicked');
+        //}
+        //document.getElementById("Click").onmouseover = function(){
+               // document.getElementById("Click").style.color= "red";
+        //}
+        //document.getElementById("Click").onmouseout = function(){
+            //document.getElementById("Click").style.color= "grey";
+        
+        const buttonId = document.getElementById("Click");
+        
+        buttonId.onclick = function(){
+            alert('Button was Clicked');
+        }
+        buttonId.onmouseover = function(){
+            buttonId.style.color= "red";
+        }
+        buttonId.onmouseout = function(){
+            buttonId.style.color= "grey";
+        }
+
+
+        document.getElementById("Click_here").onclick = function(){
+             document.body.style.backgroundColor = 'red';
+        }
+        
+       /* <input type="text" id="colorInput" placeholder="Enter a color">
+        <button id="Click_here">Change Background Color</button>*/
+
+
+    document.getElementById("Click_here").onclick = function(){
+        var color = document.getElementById("colorInput").value;
+        document.body.style.backgroundColor = color;
+    }
+    
+    document.getElementById("Click_here").onclick = function(){
+    var color = document.getElementById("colorInput").value;
+    if (color.match(/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/) || color.match(/^(red|green|blue|yellow|orange|purple|pink|black|white|gray|brown|grey)$/i)) {
+        document.body.style.backgroundColor = color;
+    } else {
+        alert("Invalid color. Please enter a valid color name or hex code.");
+    }
+}
+function changeBackgroundColorFromInput() {
+            const color = document.getElementById('colorInput').value || '#ffffff'; // Default to white if input is empty
+            if (isValidColor(color)) {
+                changeBackgroundColor(color);
+            } else {
+                alert('Invalid color! Please enter a valid color name or hex code.');
+            }
+        }
+    
+
+
+
+    </script>
+</body>
+</html>
+
+<!--internal Java script--> 
+
